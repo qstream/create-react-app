@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import { Text } from '@qstream/quik';
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
