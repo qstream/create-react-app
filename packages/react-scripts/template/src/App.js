@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import { Text } from '@qstream/quik';
+
 import './App.css';
 
 class App extends Component {
@@ -8,11 +10,21 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://github.com/qstream/create-react-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Welcome to Qstream's Create React App
+          </a>
         </header>
-        <p className="App-intro">
+        <Text>
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        </Text>
       </div>
     );
   }
