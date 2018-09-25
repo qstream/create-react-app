@@ -1,0 +1,30 @@
+<html>
+  <head>
+    hello world
+    <script type="text/javascript">
+      (function(){
+        var hash = {};
+        location.hash.replace(/^#\/?/, '').split('&').forEach(function(kv) {
+          var keyValuePair = kv.split('=', 2)
+          hash[keyValuePair[0]] = decodeURIComponent(keyValuePair[1]);
+        });
+        consol.log(location)
+        console.error(hash);
+        if (hash.access_token) {
+          localStorage.setItem('qs::accessToken', hash.access_token);
+        }
+
+        /*
+        *   Token refresh is done using a hidden iFrame
+        */
+        var inIFrame = (window.location != window.parent.location);
+
+        if (!inIFrame) {
+          document.location.href = 'index.html';
+        }
+
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
